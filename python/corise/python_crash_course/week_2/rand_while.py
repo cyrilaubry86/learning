@@ -3,58 +3,54 @@ import time
 start_time = time.time()
 
 
+rand_number = random.randint(1,1000000)
+print(rand_number)
+
+counter = 0
+event_count = 0
+while True:
+    rand_number = random.randint(1,1000000)
+    print(rand_number)
+    if rand_number == 42:
+        print(rand_number)
+        print('Hey, got 42 !')
+        event_count += 1
+        break
+    counter += 1
+print(f'counter is {counter}')
+print(f'the event_count is {event_count}')
+print("--- %s seconds ---" % round((time.time() - start_time), 2))
 
 
-# rand_number = random.randint(1,1000000)
-# print(rand_number)
-
-# counter = 0
-# event_count = 0
-# while True:
-#     rand_number = random.randint(1,1000000)
-#     print(rand_number)
-#     if rand_number == 42:
-#         print(rand_number)
-#         print('Hey, got 42 !')
-#         event_count += 1
-#         break
-#     counter += 1
-# print(f'counter is {counter}')
-# print(f'the event_count is {event_count}')
-# print("--- %s seconds ---" % round((time.time() - start_time), 2))
-
-
-# def find_42(n):
-#     counter = 0
-#     while True:
-#         rand_number = random.randint(0, n)
-#         #print(rand_number)
-#         if rand_number == 42:
-#             #print(rand_number)
-#             #print('Hey, got 42 !')
-#             break
-#         counter += 1
-#     print(counter)
-#     #return counter
-#     #print(f'counter is {counter}')
-#     #print("--- %s seconds ---" % round((time.time() - start_time), 2))
+def find_42(n):
+    counter = 0
+    while True:
+        rand_number = random.randint(0, n)
+        #print(rand_number)
+        if rand_number == 42:
+            #print(rand_number)
+            #print('Hey, got 42 !')
+            break
+        counter += 1
+    print(counter)
+    #return counter
+    #print(f'counter is {counter}')
+    #print("--- %s seconds ---" % round((time.time() - start_time), 2))
 
 
 
-# upper_bound = 4
-# n = 1000000
-# runtimes = 0
-# for i in range(1, upper_bound):
-#     find_42(n)
-#     runtime = round((time.time() - start_time), 2)
-#     runtimes += runtime
-# avg_runtime = round(runtime / (upper_bound - 1), 2)
-# print(f'{avg_runtime} seconds')
-    
-    
-    
-    
-    
+upper_bound = 4
+n = 1000000
+runtimes = 0
+for i in range(1, upper_bound):
+    find_42(n)
+    runtime = round((time.time() - start_time), 2)
+    runtimes += runtime
+avg_runtime = round(runtime / (upper_bound - 1), 2)
+print(f'{avg_runtime} seconds')
+
+
+
 ##########################################
 def find_number(n, number):
     counter = 0
